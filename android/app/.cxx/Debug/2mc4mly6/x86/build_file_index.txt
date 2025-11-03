@@ -1,0 +1,1 @@
+/Users/Mackbook/Github/RN/baseapp/node_modules/react-native/ReactAndroid/cmake-utils/default-app-setup/CMakeLists.txt

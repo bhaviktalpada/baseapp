@@ -1,0 +1,1 @@
+/Users/Mackbook/Github/RN/baseapp/android/app/build/intermediates/cxx/Debug/2mc4mly6/obj/arm64-v8a
