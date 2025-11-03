@@ -1,4 +1,4 @@
-package com.hinduutsavsamitiapp
+package com.hinduutsavsamiti
 
 import android.app.Application
 import com.facebook.react.PackageList

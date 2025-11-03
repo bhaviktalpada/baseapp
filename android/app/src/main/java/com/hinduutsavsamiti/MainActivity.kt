@@ -1,4 +1,4 @@
-package com.hinduutsavsamitiapp
+package com.hinduutsavsamiti
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

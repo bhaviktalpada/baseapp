@@ -355,7 +355,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = hindumobile/hindumobile.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9B27MDUAV3;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = hindumobile/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = hindumobile;
@@ -370,7 +370,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hinduutsavsamiti;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hinduutsavsamitiapp;
 				PRODUCT_NAME = hindumobile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -386,7 +386,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = hindumobile/hindumobile.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9B27MDUAV3;
 				INFOPLIST_FILE = hindumobile/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = hindumobile;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
@@ -400,7 +400,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hinduutsavsamiti;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hinduutsavsamitiapp;
 				PRODUCT_NAME = hindumobile;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
