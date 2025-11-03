@@ -5,41 +5,58 @@
  * @format
  */
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
-import {
-  SafeAreaProvider,
-  useSafeAreaInsets,
-} from 'react-native-safe-area-context';
+import React, { useEffect } from "react";
 
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
+import { StatusBar, StyleSheet, View } from "react-native";
+import { Provider as StoreProvider } from "react-redux";
+import { MenuProvider } from "react-native-popup-menu";
+import BootSplash from "react-native-bootsplash";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { PersistGate } from "redux-persist/integration/react";
+import { persistedStore, store } from "@/redux/store/store";
+import Toast from "react-native-toast-message";
+import { toastConfig } from "@/utils";
+import Route from "@/navigation";
+import { STATUSBAR_TYPE } from "@/utils/app-enum";
+import { COLORS } from "@/theme";
+
+function App(): React.JSX.Element {
+  const barStyle = "light-content";
+
+  useEffect(() => {
+    const init = async () => {
+      // …do multiple sync or async tasks
+    };
+
+    init().finally(async () => {
+      await BootSplash.hide({ fade: true });
+      console.log("BootSplash has been hidden successfully");
+    });
+  }, []);
 
   return (
-    <SafeAreaProvider>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <AppContent />
-    </SafeAreaProvider>
-  );
-}
-
-function AppContent() {
-  const safeAreaInsets = useSafeAreaInsets();
-
-  return (
-    <View style={styles.container}>
-      <NewAppScreen
-        templateFileName="App.tsx"
-        safeAreaInsets={safeAreaInsets}
-      />
-    </View>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <StoreProvider store={store}>
+        <PersistGate persistor={persistedStore} loading={null}>
+          <StatusBar
+            translucent={true}
+            barStyle={STATUSBAR_TYPE.DARK}
+            backgroundColor={COLORS.colorTransparent}
+          />
+          <View style={styles.mainContainer}>
+            <MenuProvider>
+              <Route />
+            </MenuProvider>
+            <Toast config={toastConfig} />
+          </View>
+        </PersistGate>
+      </StoreProvider>
+    </GestureHandlerRootView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
+  mainContainer: { flex: 1 },
 });
 
 export default App;
